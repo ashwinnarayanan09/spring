@@ -34,10 +34,13 @@ public class DemoApplication {
 
 
 			DemoService demoService = (DemoService) ctx.getBean("demoService");
-			demoService.show();
+			//demoService.show();
+			demoService.hello();
 
 			DemoService demoService2 = new DemoService();
-			demoService2.show();
+			//demoService2.show();
+
+
 
 
 		};

@@ -6,11 +6,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoService {
 
-    @Autowired
-    DemoBean demoBean;
+    public void show() throws Exception{
+        System.out.println("DemoService show:");
+        throw new Exception("Hello World");
+    }
 
-    public void show(){
-        System.out.println("DemoService print:"+demoBean.getName());
+    public void hello() throws Exception{
+        System.out.println("DemoService hello:");
+       // throw new Exception();
     }
 
 }

@@ -14,9 +14,6 @@ public class DemoController {
     DemoService demoService;
 
     @Autowired
-    DemoBean demoBean;
-
-    @Autowired
     DemoComponent demoComponent;
 
 
@@ -26,7 +23,7 @@ public class DemoController {
     }
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public void hello(){
+    public void hello() throws Exception{
 
         System.out.println("hello:"+demoComponent.getName());
         demoService.show();
