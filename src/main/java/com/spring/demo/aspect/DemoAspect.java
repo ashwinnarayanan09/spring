@@ -1,4 +1,4 @@
-package com.spring.demo;
+package com.spring.demo.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -30,7 +30,7 @@ public class DemoAspect {
         } catch (Throwable throwable) {
             throw throwable;
         } finally {
-            System.out.println("Logging:"+proceedingJoinPoint);
+            //System.out.println("Logging:"+proceedingJoinPoint);
         }
 
         return value;

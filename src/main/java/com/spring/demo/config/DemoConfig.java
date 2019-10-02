@@ -1,6 +1,7 @@
-package com.spring.demo;
+package com.spring.demo.config;
 
 
+import com.spring.model.DemoBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
