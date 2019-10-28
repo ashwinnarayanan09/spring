@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * Created by ashwin on 2019-10-28.
  */
 
-@Service
+//@Service
 public class UserService {
 
     private CustomLogger customLogger = CustomLoggerFactory.getCustomLogger();

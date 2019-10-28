@@ -41,7 +41,7 @@ public class DemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
-			UserService userService = (UserService) ctx.getBean("userService");
+			UserService userService = (UserService) ctx.getBean(UserService.class);
 			User user = new User(1,"Ashwin","Narayanan");
 			userService.createUser(user);
 		};
