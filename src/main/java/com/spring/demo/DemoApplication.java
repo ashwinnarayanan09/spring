@@ -1,14 +1,12 @@
 package com.spring.demo;
 
-import com.spring.demo.service.DemoService;
-import com.spring.model.DemoBean;
+import com.spring.demo.service.UserService;
+import com.spring.demo.model.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-
-import java.util.Arrays;
 
 @SpringBootApplication
 
@@ -19,7 +17,7 @@ public class DemoApplication {
 		System.out.println("Bean creation completed");
 	}
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 
@@ -39,5 +37,15 @@ public class DemoApplication {
 			DemoService demoService2 = new DemoService();
 			//demoService2.show();
 		};
+	}*/
+	@Bean
+	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+		return args -> {
+			UserService userService = (UserService) ctx.getBean("userService");
+			User user = new User(1,"Ashwin","Narayanan");
+			userService.createUser(user);
+		};
 	}
+
+
 }

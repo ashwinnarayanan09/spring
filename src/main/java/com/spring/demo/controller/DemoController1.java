@@ -11,8 +11,6 @@ public class DemoController1 {
 
     DemoService demoService;
 
-
-
     @Autowired
     DemoComponent demoComponent;
 
