@@ -20,7 +20,6 @@ public class DemoController {
 
     public DemoController(){
 
-
     }
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)

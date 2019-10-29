@@ -1,4 +1,4 @@
-package com.spring.model;
+package com.spring.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;

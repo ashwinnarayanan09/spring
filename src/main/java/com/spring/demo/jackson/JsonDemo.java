@@ -1,10 +1,9 @@
-package com.spring.jackson;
+package com.spring.demo.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.spring.model.Employee;
+import com.spring.demo.model.Employee;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class JsonDemo {
