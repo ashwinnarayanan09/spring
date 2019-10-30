@@ -12,6 +12,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import javax.jws.soap.SOAPBinding;
+
+import java.util.List;
+
+import static org.springframework.http.HttpMethod.GET;
+
 @SpringBootApplication
 
 public class DemoApplication {
@@ -52,8 +58,8 @@ public class DemoApplication {
 			User user = new User(1,"Ashwin","Narayanan");
 			userService.createUser(user);
 
-			User user1 = restTemplate.getForObject("http://localhost:8080/users", User.class);
-			logger.info(user1.toString());
+			User user1 = restTemplate.getForObject("http://localhost:8080/user/1", User.class);
+			logger.info(user1.getFirstName());
 		};
 	}
 
