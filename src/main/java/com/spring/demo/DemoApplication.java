@@ -1,6 +1,5 @@
 package com.spring.demo;
 
-import com.spring.demo.service.DemoService;
 import com.spring.demo.service.UserService;
 import com.spring.demo.model.User;
 import org.slf4j.Logger;
@@ -11,12 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-
-import javax.jws.soap.SOAPBinding;
-
-import java.util.List;
-
-import static org.springframework.http.HttpMethod.GET;
 
 @SpringBootApplication
 
@@ -39,15 +32,6 @@ public class DemoApplication {
 			for (String beanName : beanNames) {
 				//System.out.println(beanName);
 			}
-
-			DemoBean demoBean = (DemoBean) ctx.getBean("demoBean");
-			System.out.println("hello:"+demoBean.getName());
-
-			DemoService demoService = (DemoService) ctx.getBean("demoService");
-			//demoService.show();
-			demoService.hello();
-			DemoService demoService2 = new DemoService();
-			//demoService2.show();
 		};
 	}*/
 
