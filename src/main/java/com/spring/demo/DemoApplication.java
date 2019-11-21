@@ -1,5 +1,6 @@
 package com.spring.demo;
 
+import com.spring.demo.model.Customer;
 import com.spring.demo.service.UserService;
 import com.spring.demo.model.User;
 import org.slf4j.Logger;
@@ -38,12 +39,14 @@ public class DemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx,RestTemplate restTemplate) {
 		return args -> {
-			UserService userService = (UserService) ctx.getBean(UserService.class);
+			/*UserService userService = (UserService) ctx.getBean(UserService.class);
 			User user = new User(1,"Ashwin","Narayanan");
 			userService.createUser(user);
 
 			User user1 = restTemplate.getForObject("http://localhost:8080/user/1", User.class);
-			logger.info(user1.getFirstName());
+			logger.info(user1.getFirstName());*/
+
+			logger.debug("response {}",restTemplate.getForObject("http://localhost:9090/customers/1", Customer.class));
 		};
 	}
 
